@@ -1,0 +1,33 @@
+<%- include('partials/admin_head') %> <%- include('partials/admin_header') %>
+<main role="main">
+  <%- include('partials/admin_nav') %>
+  <section>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Kommentar</th>
+        <th>Slet</th>
+      </tr>
+      <% results.forEach(result => { %>
+      <tr>
+        <td>
+          <%= result.id %>
+        </td>
+        <td>
+          <%= result.comment %>
+        </td>
+        <td>
+          <div>
+            <a href="/projects/exam/admin/comment/delete/<%= result.id %>">
+              <p>Delete</p>
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <% }); %>
+    </table>
+  </section>
+</main>
+
+<%- include('partials/admin_footer') %>

@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+}
+
+/*-------------------------------- Desktop --------------------------------*/
+
+/*----------- Header -----------*/
+header {
+  height: 50px;
+  background-color: #123459;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+nav {
+  height: 100%;
+}
+
+#desktop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+#desktop ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  padding: 0;
+}
+
+#desktop ul li {
+  list-style: none;
+}
+
+#desktop ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.lang_switch {
+  display: flex;
+  color: white;
+  margin-right: 15px;
+  align-items: center;
+}
+
+.lang_switch a {
+  color: white;
+  text-decoration: none;
+}
+
+.lang_switch p {
+  padding: 0 10px;
+}
+
+#mobile {
+  display: none;
+}
+
+#mobile p {
+  color: white;
+  font-size: 32px;
+}
+
+#mobile_links {
+  display: none;
+  background-color: #326aa6;
+}
+
+#mobile_links ul,
+#mobile p:first-child {
+  padding-left: 10px;
+}
+
+#mobile p:first-child {
+  margin-top: 6px;
+}
+
+#mobile_links li {
+  list-style: none;
+  margin-top: 10px;
+}
+#mobile_links li:last-of-type {
+  padding-bottom: 10px;
+}
+
+#mobile_links li a,
+#mobile_links p {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+#mobile button {
+  background-color: #123459;
+  color: white;
+  border: none;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 40px;
+  padding: 9px 6px 0;
+}
+
+/*----------- Frontpage -----------*/
+#frontpage h2 {
+  font-weight: 100;
+  font-size: 30px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+#front_top {
+  background-image: url("/bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 910px;
+}
+
+#front_top h1 {
+  font-weight: 100;
+  font-size: 60px;
+  margin: 40px 0 10px;
+  text-align: center;
+}
+
+#frontpage section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding-top: 50px;
+}
+
+#prime_skills_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.prime_skills {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  margin-bottom: 50px;
+  padding: 0 10px;
+}
+
+.prime_skills img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.prime_skills:last-of-type img {
+  width: 150px;
+}
+
+/*----------- Skills -----------*/
+#skills {
+  padding-top: 50px;
+  min-height: 740px;
+}
+
+#skills h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#skills_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.skill_list {
+  width: 600px;
+  padding-bottom: 50px;
+}
+
+.skill_list h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skill_list ul li {
+  margin-bottom: 15px;
+}
+
+/*----------- Projects list -----------*/
+#projects {
+  padding-top: 50px;
+  min-height: 740px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.project_title {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.project_container h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.site_info {
+  font-size: 18px;
+  margin-top: 7px;
+}
+
+.not_mobile {
+  color: red;
+  padding-left: 5px;
+}
+
+.is_mobile {
+  color: green;
+  padding-left: 5px;
+}
+
+.description_code_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.project_description,
+.project_code {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project_description h2,
+.project_code h2 {
+  font-weight: normal;
+}
+
+.project_description section {
+  margin: 10px;
+}
+.project_description section p {
+  margin-bottom: 15px;
+}
+
+.project_code li {
+  margin: 10px 0;
+}
+
+/*---------------------- Card drawing app ----------------------*/
+#card_draw {
+  padding-top: 50px;
+  min-height: 740px;
+  display: flex;
+}
+
+/* ----------- Controlls ----------- */
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+}
+
+#controls button {
+  width: 120px;
+  height: 50px;
+  font-size: 16px;
+  margin: 20px;
+}
+
+#draw_amount_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#draw_amount_container input {
+  width: 177px;
+}
+
+#wrong_input {
+  display: none;
+  color: red;
+  text-align: center;
+}
+
+#card_art_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+#showDomt {
+  margin: 10px;
+}
+
+#showDomt input {
+  margin-left: 10px;
+}
+
+/* ----------- Card Area ----------- */
+
+#card_area_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#card_area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.cards {
+  text-align: center;
+  width: 250px;
+  margin: 10px;
+}
+
+.cards img {
+  width: 250px;
+}
+
+.tarrot_cards {
+  text-align: center;
+  width: 350px;
+  margin: 10px;
+}
+
+.tarrot_cards img {
+  width: 350px;
+}
+
+.cardName {
+  text-transform: capitalize;
+}
+
+/*----------- Footer -----------*/
+footer {
+  background-color: #123459;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer div {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+footer div span {
+  font-weight: 600;
+}
+
+footer div div {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  margin: 30px 0 20px;
+}
+
+#linkedin {
+  font-size: 50px;
+  color: #0e76a8;
+}
+
+#github {
+  font-size: 50px;
+  color: black;
+}
+
+/*-------------------------------- Mobile (Max 1024px width) --------------------------------*/
+@media screen and (max-width: 1024px) {
+  /*----------- Projects list -----------*/
+
+  .project_description,
+  .project_code {
+    width: 400px;
+  }
+}
+
+/*-------------------------------- Mobile (Max 812px width) --------------------------------*/
+@media screen and (max-width: 812px) {
+  /*----------- Projects list -----------*/
+
+  .project_description,
+  .project_code {
+    width: 300px;
+  }
+}
+
+/*-------------------------------- Mobile (Max 720px width) --------------------------------*/
+@media screen and (max-width: 720px) {
+  /*----------- Header -----------*/
+  header {
+    height: auto;
+    min-height: 59px;
+  }
+
+  #desktop {
+    display: none;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  /*----------- Card drawing app -----------*/
+  #card_draw {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*-------------------------------- Mobile (Max 420px width) --------------------------------*/
+@media screen and (max-width: 420px) {
+  /*----------- Frontpage -----------*/
+
+  .prime_skills {
+    width: 300px;
+  }
+
+  /*----------- Card drawing app -----------*/
+  .tarrot_cards {
+    width: 250px;
+  }
+
+  .tarrot_cards img {
+    width: 250px;
+  }
+}

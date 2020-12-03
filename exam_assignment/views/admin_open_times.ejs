@@ -1,0 +1,42 @@
+<%- include('partials/admin_head') %> <%- include('partials/admin_header') %>
+<main role="main">
+  <%- include('partials/admin_nav') %>
+
+  <section>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Days</th>
+        <th>Open</th>
+        <th>Close</th>
+        <th>Edit</th>
+      </tr>
+      <% results.forEach(result => { %>
+      <tr>
+        <td>
+          <%= result.id %>
+        </td>
+        <td>
+          <%= result.days %>
+        </td>
+        <td>
+          <%= result.open %>
+        </td>
+        <td>
+          <%= result.close %>
+        </td>
+        <td>
+          <div>
+            <a href="/projects/exam/admin/open_times/edit/<%= result.id %>">
+              <p>Edit</p>
+              <i class="fas fa-edit"></i>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <% }); %>
+    </table>
+  </section>
+</main>
+
+<%- include('partials/admin_footer') %>
