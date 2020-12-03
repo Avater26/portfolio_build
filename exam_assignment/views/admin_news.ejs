@@ -3,7 +3,7 @@
   <%- include('partials/admin_nav') %>
 
   <section>
-    <a class="newData" href="/projects/exam/admin/news/new">Opret en ny nyhed</a>
+    <a class="newData" href="/exam/admin/news/new">Opret en ny nyhed</a>
     <table>
       <tr>
         <th>ID</th>
@@ -28,12 +28,12 @@
         </td>
         <td>
           <div>
-            <a href="/projects/exam/admin/news/edit/<%= result.id %>">
+            <a href="/exam/admin/news/edit/<%= result.id %>">
               <p>Rediger</p>
               <i class="fas fa-edit"></i>
             </a>
             <hr />
-            <a href="/projects/exam/admin/news/delete/<%= result.id %>">
+            <a href="/exam/admin/news/delete/<%= result.id %>">
               <p>Slet</p>
               <i class="fas fa-trash"></i>
             </a>

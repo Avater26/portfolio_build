@@ -48,7 +48,7 @@ exports.editContact = async function (req, res, next) {
       req.flash("error", "Der skete en fejl under opdateringen");
     }
 
-    res.redirect("/projects/exam/admin/contact/edit/" + req.params.id);
+    res.redirect("/exam/admin/contact/edit/" + req.params.id);
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");

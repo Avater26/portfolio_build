@@ -54,7 +54,7 @@ exports.createUser = async function (req, res, next) {
       req.fields.role
     );
 
-    res.redirect("/projects/exam/admin/users");
+    res.redirect("/exam/admin/users");
   } catch (error) {
     if (error.code === "ER_DUP_ENTRY") {
       return res.send("User already exists");
@@ -96,10 +96,10 @@ exports.editUser = async function (req, res, next) {
       req.flash("error", "Der skete en fejl under opdateringen");
     }
 
-    res.redirect("/projects/exam/admin/user/edit/" + req.params.id);
+    res.redirect("/exam/admin/user/edit/" + req.params.id);
   } catch (error) {
     console.log(error);
-    res.redirect("/projects/exam/admin/user/edit/" + req.params.id);
+    res.redirect("/exam/admin/user/edit/" + req.params.id);
   }
 };
 
@@ -107,7 +107,7 @@ exports.deleteUser = async function (req, res, next) {
   try {
     await deleteUserModel(req.params.id);
 
-    res.redirect("/projects/exam/admin/users");
+    res.redirect("/exam/admin/users");
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");

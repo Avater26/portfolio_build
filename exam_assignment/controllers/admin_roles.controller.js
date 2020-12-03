@@ -39,7 +39,7 @@ exports.createRole = async function (req, res, next) {
   try {
     await createRoleModel(req.fields.name, req.fields.level);
 
-    res.redirect("/projects/exam/admin/roles");
+    res.redirect("/exam/admin/roles");
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");
@@ -74,7 +74,7 @@ exports.editRole = async function (req, res, next) {
       req.flash("error", "Der skete en fejl under opdateringen");
     }
 
-    res.redirect("/projects/exam/admin/roles");
+    res.redirect("/exam/admin/roles");
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");
@@ -85,7 +85,7 @@ exports.deleteRole = async function (req, res, next) {
   try {
     await deleteRoleModel(req.params.id);
 
-    res.redirect("/projects/exam/admin/roles");
+    res.redirect("/exam/admin/roles");
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");

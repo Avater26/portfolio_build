@@ -14,7 +14,7 @@
       ><%= typeof messages != 'undefined' && typeof messages.error !=
       'undefined' ? messages.error : '' %></span
     >
-    <form action="/projects/exam/boliger" method="get">
+    <form action="/exam/boliger" method="get">
       <div class="case_number">
         <label for="case_number">Sagsnummer:</label>
         <input type="search" name="case_number" id="case_number" />
@@ -153,7 +153,7 @@
         <div class="houseList_info">
           <h2><%= result.title %></h2>
           <p><%= result.description %></p>
-          <a href="/projects/exam/bolig/<%= result.id %>">Læs mere</a>
+          <a href="/exam/bolig/<%= result.id %>">Læs mere</a>
         </div>
       </div>
 

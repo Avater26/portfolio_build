@@ -13,17 +13,17 @@ exports.loginCheck = async function (req, res, next) {
     const rows = await getUserByUsername(req.fields.username);
 
     if (rows.length !== 1) {
-      res.redirect("/projects/exam/login");
+      res.redirect("/exam/login");
       return;
     }
     if (!compareSync(req.fields.password, rows[0].password)) {
-      res.redirect("/projects/exam/login");
+      res.redirect("/exam/login");
       return;
     }
     req.session.isLoggedIn = true;
     req.session.user = rows[0].id;
     req.app.locals.isLoggedIn = true;
-    res.redirect("/projects/exam/admin");
+    res.redirect("/exam/admin");
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");
@@ -34,5 +34,5 @@ exports.logout = function (req, res, next) {
   delete req.session.isLoggedIn;
   delete req.app.locals.isLoggedIn;
   delete req.session.user;
-  res.redirect("/projects/exam/");
+  res.redirect("/exam/");
 };

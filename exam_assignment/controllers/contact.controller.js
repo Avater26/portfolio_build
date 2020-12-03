@@ -39,7 +39,7 @@ exports.postComment = async function (req, res, next) {
         "Der skete en fejl, da vi prøvede at sende din kommentar."
       );
     }
-    res.redirect("/projects/exam/kontakt");
+    res.redirect("/exam/kontakt");
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");

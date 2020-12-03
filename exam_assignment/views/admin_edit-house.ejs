@@ -59,7 +59,7 @@
             </fieldset>
             <button type="submit">Update</button>
         </form>
-        <form class="image_form" action="/projects/exam/admin/house/setPrimaryImage" method="POST">
+        <form class="image_form" action="/exam/admin/house/setPrimaryImage" method="POST">
             <% images.forEach(image => { %>
             <div>
                 <input type="radio" name="primary_image" id="<%= image.id %>" value="<%= image.id %>"

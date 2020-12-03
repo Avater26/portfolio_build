@@ -62,110 +62,110 @@ const {
 } = require("../controllers/admin_comments.controller");
 module.exports = function (app) {
   // Load admin panel
-  app.get("/projects/exam/admin", auth, isAdmin, getDash);
+  app.get("/exam/admin", auth, isAdmin, getDash);
 
   // Load admin panel dashboards
-  app.get("/projects/exam/admin/users", auth, isAdmin, getUsers);
-  app.get("/projects/exam/admin/houses", auth, isAdmin, getHouses);
-  app.get("/projects/exam/admin/house_types", auth, isAdmin, getHouseTypes);
-  app.get("/projects/exam/admin/roles", auth, isAdmin, getRoles);
-  app.get("/projects/exam/admin/open_times", auth, isAdmin, getTimes);
-  app.get("/projects/exam/admin/news", auth, isAdmin, getNews);
-  app.get("/projects/exam/admin/contact", auth, isAdmin, getContact);
-  app.get("/projects/exam/admin/comments", auth, isAdmin, getComments);
+  app.get("/exam/admin/users", auth, isAdmin, getUsers);
+  app.get("/exam/admin/houses", auth, isAdmin, getHouses);
+  app.get("/exam/admin/house_types", auth, isAdmin, getHouseTypes);
+  app.get("/exam/admin/roles", auth, isAdmin, getRoles);
+  app.get("/exam/admin/open_times", auth, isAdmin, getTimes);
+  app.get("/exam/admin/news", auth, isAdmin, getNews);
+  app.get("/exam/admin/contact", auth, isAdmin, getContact);
+  app.get("/exam/admin/comments", auth, isAdmin, getComments);
 
   // Load and create new user, house, category or role
-  app.get("/projects/exam/admin/user/new", auth, isAdmin, getNewUser);
-  app.post("/projects/exam/admin/user/new", auth, isAdmin, createUser);
+  app.get("/exam/admin/user/new", auth, isAdmin, getNewUser);
+  app.post("/exam/admin/user/new", auth, isAdmin, createUser);
 
-  app.get("/projects/exam/admin/house/new", auth, isAdmin, getNewHouse);
-  app.post("/projects/exam/admin/house/new", auth, isAdmin, createNewHouse);
+  app.get("/exam/admin/house/new", auth, isAdmin, getNewHouse);
+  app.post("/exam/admin/house/new", auth, isAdmin, createNewHouse);
 
   app.get(
-    "/projects/exam/admin/house_type/new",
+    "/exam/admin/house_type/new",
     auth,
     isAdmin,
     getNewHouseType
   );
   app.post(
-    "/projects/exam/admin/house_type/new",
+    "/exam/admin/house_type/new",
     auth,
     isAdmin,
     createHouseType
   );
 
-  app.get("/projects/exam/admin/role/new", auth, isAdmin, getNewRole);
-  app.post("/projects/exam/admin/role/new", auth, isAdmin, createRole);
+  app.get("/exam/admin/role/new", auth, isAdmin, getNewRole);
+  app.post("/exam/admin/role/new", auth, isAdmin, createRole);
 
-  app.get("/projects/exam/admin/news/new", auth, isAdmin, getNewsCreate);
-  app.post("/projects/exam/admin/news/new", auth, isAdmin, createNews);
+  app.get("/exam/admin/news/new", auth, isAdmin, getNewsCreate);
+  app.post("/exam/admin/news/new", auth, isAdmin, createNews);
 
   // Load and edit a user, house, category or role
-  app.get("/projects/exam/admin/user/edit/:id", auth, isAdmin, getUserEdit);
-  app.post("/projects/exam/admin/user/edit/:id", auth, isAdmin, editUser);
+  app.get("/exam/admin/user/edit/:id", auth, isAdmin, getUserEdit);
+  app.post("/exam/admin/user/edit/:id", auth, isAdmin, editUser);
 
-  app.get("/projects/exam/admin/house/edit/:id", auth, isAdmin, getHouseEdit);
-  app.post("/projects/exam/admin/house/edit/:id", auth, isAdmin, editHouse);
+  app.get("/exam/admin/house/edit/:id", auth, isAdmin, getHouseEdit);
+  app.post("/exam/admin/house/edit/:id", auth, isAdmin, editHouse);
   app.post(
-    "/projects/exam/admin/house/setPrimaryImage",
+    "/exam/admin/house/setPrimaryImage",
     auth,
     isAdmin,
     setPrimaryImage
   );
 
   app.get(
-    "/projects/exam/admin/house_type/edit/:id",
+    "/exam/admin/house_type/edit/:id",
     auth,
     isAdmin,
     getHouseTypeEdit
   );
   app.post(
-    "/projects/exam/admin/house_type/edit/:id",
+    "/exam/admin/house_type/edit/:id",
     auth,
     isAdmin,
     editHouseType
   );
 
-  app.get("/projects/exam/admin/role/edit/:id", auth, isAdmin, getRoleEdit);
-  app.post("/projects/exam/admin/role/edit/:id", auth, isAdmin, editRole);
+  app.get("/exam/admin/role/edit/:id", auth, isAdmin, getRoleEdit);
+  app.post("/exam/admin/role/edit/:id", auth, isAdmin, editRole);
 
   app.get(
-    "/projects/exam/admin/open_times/edit/:id",
+    "/exam/admin/open_times/edit/:id",
     auth,
     isAdmin,
     getTimesEdit
   );
   app.post(
-    "/projects/exam/admin/open_times/edit/:id",
+    "/exam/admin/open_times/edit/:id",
     auth,
     isAdmin,
     editTimes
   );
 
-  app.get("/projects/exam/admin/news/edit/:id", auth, isAdmin, getNewsEdit);
-  app.post("/projects/exam/admin/news/edit/:id", auth, isAdmin, editNews);
+  app.get("/exam/admin/news/edit/:id", auth, isAdmin, getNewsEdit);
+  app.post("/exam/admin/news/edit/:id", auth, isAdmin, editNews);
 
   app.get(
-    "/projects/exam/admin/contact/edit/:id",
+    "/exam/admin/contact/edit/:id",
     auth,
     isAdmin,
     getContactEdit
   );
-  app.post("/projects/exam/admin/contact/edit/:id", auth, isAdmin, editContact);
+  app.post("/exam/admin/contact/edit/:id", auth, isAdmin, editContact);
 
   // Delete a user, house, category or role
-  app.get("/projects/exam/admin/user/delete/:id", auth, isAdmin, deleteUser);
-  app.get("/projects/exam/admin/house/delete/:id", auth, isAdmin, deleteHouse);
+  app.get("/exam/admin/user/delete/:id", auth, isAdmin, deleteUser);
+  app.get("/exam/admin/house/delete/:id", auth, isAdmin, deleteHouse);
   app.get(
-    "/projects/exam/admin/house_type/delete/:id",
+    "/exam/admin/house_type/delete/:id",
     auth,
     isAdmin,
     deleteHouseType
   );
-  app.get("/projects/exam/admin/role/delete/:id", auth, isAdmin, deleteRole);
-  app.get("/projects/exam/admin/news/delete/:id", auth, isAdmin, deleteNews);
+  app.get("/exam/admin/role/delete/:id", auth, isAdmin, deleteRole);
+  app.get("/exam/admin/news/delete/:id", auth, isAdmin, deleteNews);
   app.get(
-    "/projects/exam/admin/comment/delete/:id",
+    "/exam/admin/comment/delete/:id",
     auth,
     isAdmin,
     deleteComment

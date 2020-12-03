@@ -33,7 +33,7 @@ exports.getNewsCreate = async function (req, res, next) {
 exports.createNews = async function (req, res, next) {
   try {
     await newsCreate(req.fields.headline, req.fields.text);
-    res.redirect("/projects/exam/admin/news");
+    res.redirect("/exam/admin/news");
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");
@@ -68,7 +68,7 @@ exports.editNews = async function (req, res, next) {
       req.flash("error", "Der skete en fejl under opdateringen");
     }
 
-    res.redirect("/projects/exam/admin/news/edit/" + req.params.id);
+    res.redirect("/exam/admin/news/edit/" + req.params.id);
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");
@@ -78,9 +78,9 @@ exports.editNews = async function (req, res, next) {
 exports.deleteNews = async function (req, res, next) {
   try {
     await newsDelete(req.params.id);
-    res.redirect("/projects/exam/admin/news");
+    res.redirect("/exam/admin/news");
   } catch (error) {
     console.log(error);
-    res.redirect("/projects/exam/admin/news");
+    res.redirect("/exam/admin/news");
   }
 };

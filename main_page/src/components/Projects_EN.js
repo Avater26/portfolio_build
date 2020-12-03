@@ -35,7 +35,7 @@ const Projects = () => {
       </div>
 
       <div className="project_container">
-        <a className="project_title" href="/exam">
+        <a className="project_title" href="http://localhost:3001/exam">
           Boligstjernen
         </a>
         <p className="site_info">

@@ -16,7 +16,7 @@ exports.getComments = async function (req, res, next) {
 exports.deleteComment = async function (req, res, next) {
   try {
     await commentDelete(req.params.id);
-    res.redirect("/projects/exam/admin/comments");
+    res.redirect("/exam/admin/comments");
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");

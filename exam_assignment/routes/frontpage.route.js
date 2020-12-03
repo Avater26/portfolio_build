@@ -5,7 +5,7 @@ const {
 } = require("../controllers/frontpage.controller");
 
 module.exports = function (app) {
-  app.get("/projects/exam", frontpage);
-  app.post("/projects/exam/signup", submitNewsletter);
-  app.post("/projects/exam/delete", deleteNewsletter);
+  app.get("/exam", frontpage);
+  app.post("/exam/signup", submitNewsletter);
+  app.post("/exam/delete", deleteNewsletter);
 };

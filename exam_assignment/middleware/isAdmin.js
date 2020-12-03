@@ -13,10 +13,10 @@ module.exports = async function (req, res, next) {
       return next();
     }
 
-    res.redirect("/projects/exam/");
+    res.redirect("/exam/");
     return;
   } catch (error) {
-    res.redirect("/projects/exam/");
+    res.redirect("/exam/");
     return;
   }
 };

@@ -69,7 +69,7 @@ exports.createNewHouse = async function (req, res, next) {
       await createImage(req.files.image, house.insertId);
     }
 
-    res.redirect("/projects/exam/admin/house/edit/" + house.insertId);
+    res.redirect("/exam/admin/house/edit/" + house.insertId);
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");
@@ -150,7 +150,7 @@ exports.deleteHouse = async function (req, res, next) {
   try {
     await deleteHouseModel(req.params.id);
 
-    res.redirect("/projects/exam/admin/houses");
+    res.redirect("/exam/admin/houses");
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");

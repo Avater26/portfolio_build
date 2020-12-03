@@ -46,7 +46,7 @@ exports.editTimes = async function (req, res, next) {
       id: req.params.id,
     });
 
-    res.redirect("/projects/exam/admin/open_times");
+    res.redirect("/exam/admin/open_times");
   } catch (error) {
     console.log(error);
     res.send("Something went wrong");
