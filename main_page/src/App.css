@@ -12,6 +12,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 999;
 }
 
 nav {
@@ -370,6 +371,125 @@ nav {
 
 .cardName {
   text-transform: capitalize;
+}
+/*---------------------- Memory game app ----------------------*/
+
+#game_intro {
+  background-color: rgb(60, 120, 170);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 740px;
+  padding-top: 25px;
+}
+
+#game_intro.hidden {
+  display: none;
+}
+
+#playGame {
+  margin-bottom: 4em;
+}
+
+#playGame input[type="radio"] {
+  display: none;
+}
+
+#playGame label {
+  padding: 1.25em;
+  border: 2px solid white;
+  font-weight: 700;
+  box-sizing: border-box;
+  margin: 3em 0.5em 4em;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#playGame input[type="radio"]:checked + label {
+  background-color: white;
+  color: rgb(60, 120, 170);
+}
+
+#playGame button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  padding: 1.25em 2.5em;
+  background-color: white;
+  font-weight: 700;
+  color: rgb(60, 120, 170);
+  border: none;
+  cursor: pointer;
+}
+
+#game_board {
+  display: flex;
+  min-height: 740px;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #ddd;
+}
+
+#game_board.hidden {
+  display: none;
+}
+
+#game_board section {
+  width: 200px;
+  height: 305px;
+  margin: 5px 0;
+  position: relative;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.front {
+  background-image: url("/cards/ds/Card Back.jpg");
+  background-size: contain;
+  z-index: 2;
+}
+
+#game_board .flipped {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.back img {
+  height: 305px;
+}
+
+#game_end {
+  display: none;
+  padding: 20px;
+  background-color: #ccc;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game_end.show {
+  display: flex;
 }
 
 /*----------- Footer -----------*/

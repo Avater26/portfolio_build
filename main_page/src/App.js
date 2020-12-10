@@ -23,8 +23,12 @@ import Projects_EN from "./components/Projects_EN";
 
 // ------------------------- Projects -------------------------
 // DK
+import Memory_Game from "./components/projects/memory_game/memory_game";
+
+// EN
 import Card_Draw from "./components/projects/card_draw/card_draw";
 import Tarot from "./components/projects/tarot/tarot";
+import Memory_Game_EN from "./components/projects/memory_game/memory_game_EN";
 
 import "./App.css";
 
@@ -42,6 +46,12 @@ class App extends Component {
           <Route exact path="/en/projects" component={Projects_EN} />
           <Route exact path="/projects/card-draw" component={Card_Draw} />
           <Route exact path="/projects/tarot" component={Tarot} />
+          <Route exact path="/projects/memory_game" component={Memory_Game} />
+          <Route
+            exact
+            path="/en/projects/memory_game"
+            component={Memory_Game_EN}
+          />
           <Route>
             <Redirect to="/" />
           </Route>

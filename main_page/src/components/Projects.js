@@ -137,6 +137,34 @@ const Projects = () => {
           </div>
         </div>
       </div>
+      <div className="project_container">
+        <a className="project_title" href="/projects/memory_game">
+          Huske spil projekt v1.0
+        </a>
+        <p className="site_info">
+          Mobil venlig:
+          <FontAwesomeIcon className="is_mobile" icon={faCheck} />
+        </p>
+        <p className="site_info">Sprog: Dansk og engelsk</p>
+        <div className="description_code_container">
+          <div className="project_description">
+            <h2>Projekt info</h2>
+            <section>
+              <p>
+                Et lille huske spil, som vi skulle lave under grundforløbets 2.
+                del.
+              </p>
+            </section>
+          </div>
+          <div className="project_code">
+            <h2>Projekt kode</h2>
+            <ul>
+              <li>HTML, CSS, JavaScript</li>
+              <li>React.js</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };

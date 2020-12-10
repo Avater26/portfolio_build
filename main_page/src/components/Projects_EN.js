@@ -140,6 +140,34 @@ const Projects = () => {
           </div>
         </div>
       </div>
+      <div className="project_container">
+        <a className="project_title" href="/en/projects/memory_game">
+          Memory game projekt v1.0
+        </a>
+        <p className="site_info">
+          Mobile friendly:
+          <FontAwesomeIcon className="is_mobile" icon={faCheck} />
+        </p>
+        <p className="site_info">Language: Danish and english</p>
+        <div className="description_code_container">
+          <div className="project_description">
+            <h2>Project info</h2>
+            <section>
+              <p>
+                A small memory game, that we had to make during the 2nd part of
+                the basic course.
+              </p>
+            </section>
+          </div>
+          <div className="project_code">
+            <h2>Project code</h2>
+            <ul>
+              <li>HTML, CSS, JavaScript</li>
+              <li>React.js</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };
